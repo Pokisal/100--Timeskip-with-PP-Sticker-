@@ -965,7 +965,7 @@ namespace DR_RTM
 			TransmissionaryPtr = gameMemory.Pointer("DeadRising.exe", 0x1944DD8);
 			cGametask = gameMemory.ReadByte(IntPtr.Add(cGametaskPtr, 56));
 			ReadPPArray = new int[100].Select((_, i) => gameMemory.ReadInt((IntPtr)(PhotoStatsPtr + 0x6E8 + 4 * i))).ToArray();
-			ReadCensusArray = new int[69].Select((_, i) => gameMemory.ReadInt((IntPtr)(PhotoStatsPtr + 0x4ED + 4 * i))).ToArray();
+			ReadCensusArray = new int[70].Select((_, i) => gameMemory.ReadInt((IntPtr)(PhotoStatsPtr + 0x4E9 + 4 * i))).ToArray();
 			ReadTransmissionaryArray = new byte[11].Select((_, i) => gameMemory.ReadByte((IntPtr)(TransmissionaryPtr + 0x20F6C + i))).ToArray();
 			ReadClothesHorseArray = new byte[10].Select((_, i) => gameMemory.ReadByte((IntPtr)(PhotoStatsPtr + 0x4B4 + i))).ToArray();
 			ReadGourmetArray = new byte[5].Select((_, i) => gameMemory.ReadByte((IntPtr)(PhotoStatsPtr + 0x694C + i))).ToArray();
@@ -986,6 +986,10 @@ namespace DR_RTM
 				if (loadingRoomId == 1025 && campaignProgress >= 400 && campaignProgress < 410 && EnableTimeskip == true && old.inCutsceneOrLoad && !inCutsceneOrLoad && gameTime < 10368000)
                 {
 					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 10368001u);
+				}
+				if (campaignProgress == 300 && EnableTimeskip && gameTime < 8964000)
+                {
+					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 8964001u);
 				}
 				if (campaignProgress == 340 && EnableTimeskip && gameTime < 9612000 || campaignProgress == 345 && EnableTimeskip && gameTime < 9612000)
 				{
