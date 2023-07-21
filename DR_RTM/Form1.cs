@@ -21,6 +21,8 @@ namespace DR_RTM
 
         public static Keys Key1 = Keys.OemMinus;
 
+        public static Keys Key2 = Keys.F1;
+
         public static bool PerfectGunner;
 
         public static string CurrentScreen = "PP Collector/Miscellanous";
@@ -603,6 +605,8 @@ namespace DR_RTM
         {
             InitializeComponent();
             RegisterHotKey(this.Handle, 0, (int)KeyModifier.None, Key1.GetHashCode());
+            RegisterHotKey(this.Handle, 1, (int)KeyModifier.Control, Key2.GetHashCode());
+            RegisterHotKey(this.Handle, 2, (int)KeyModifier.Alt, Keys.F5.GetHashCode());
             label133.Text = $"Click to cycle to {NextTracker}";
             toolTip1.OwnerDraw = true;
             toolTip1.Draw += new DrawToolTipEventHandler(toolTip1_Draw);
@@ -618,7 +622,9 @@ namespace DR_RTM
         private void ReloadHotkeys()
         {
             UnregisterHotKey(this.Handle, 0);
+            UnregisterHotKey(this.Handle, 1);
             RegisterHotKey(this.Handle, 0, (int)KeyModifier.None, Key1.GetHashCode());
+            RegisterHotKey(this.Handle, 1, (int)KeyModifier.Control, Key2.GetHashCode());
         }
 
         [DllImport("kernel32.dll")]
@@ -4604,6 +4610,8 @@ namespace DR_RTM
             this.checkBox1.Text = "Enable Additional Timeskips";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.checkBox1_MouseDown);
+            this.toolTip1.SetToolTip(this.checkBox1, $"Hotkey is: {Key2}");
             // 
             // label128
             // 
@@ -4669,6 +4677,7 @@ namespace DR_RTM
             this.label133.Size = new System.Drawing.Size(0, 13);
             this.label133.TabIndex = 141;
             this.label133.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label133_MouseDown);
+            this.toolTip1.SetToolTip(this.label133, $"Hotkey is: {Key1}");
             // 
             // label134
             // 
@@ -5419,7 +5428,7 @@ namespace DR_RTM
             this.label221.AutoSize = true;
             this.label221.Location = new System.Drawing.Point(7, 48);
             this.label221.Name = "label221";
-            this.label221.Size = new System.Drawing.Size(47, 13);
+            this.label221.Size = new System.Drawing.Size(0, 13);
             this.label221.TabIndex = 229;
             // 
             // Form1
@@ -5674,6 +5683,21 @@ namespace DR_RTM
                 KeyModifier modifier = (KeyModifier)((int)m.LParam & 0xFFFF);       // The modifier of the hotkey that was pressed.
                 int id = m.WParam.ToInt32();                                        // The id of the hotkey that was pressed.
 
+                if (id == 1)
+                {
+                    if (TimeSkip.EnableTimeskip == true)
+                    {
+                        checkBox1.Checked = false;
+                    }
+                    else
+                    {
+                        checkBox1.Checked = true;
+                    }
+                }
+                if (id == 2)
+                {
+                    Environment.Exit(0);
+                }
                 if (id == 0)
                 {
                     bool a = false;
@@ -5721,7 +5745,7 @@ namespace DR_RTM
             }
         }
 
-                private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
@@ -5800,13 +5824,31 @@ namespace DR_RTM
                 MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
                 try
                 {
-                    char[] a = TextboxText.ToCharArray();
-                    Key1 = (Keys)char.ToUpper(a[0]);
+                    Keys key = (Keys)Enum.Parse(typeof(Keys), TextboxText, true);
+                    Key1 = key;
                     ReloadHotkeys();
                 }
                 catch
                 {
-                    
+
+                }
+            }
+        }
+
+        private void checkBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
+                try
+                {
+                    Keys key = (Keys)Enum.Parse(typeof(Keys), TextboxText, true);
+                    Key2 = key;
+                    ReloadHotkeys();
+                }
+                catch
+                {
+
                 }
             }
         }
@@ -5844,11 +5886,11 @@ namespace DR_RTM
         private TextBox textbox;
         private MyMessageBox()
         {
-                this.textbox = new TextBox();
-                this.textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-                this.textbox.ForeColor = Color.White;
-                this.Controls.Add(this.textbox);
-                this.textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(textbox_KeyPress);
+            this.textbox = new TextBox();
+            this.textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.textbox.ForeColor = Color.White;
+            this.Controls.Add(this.textbox);
+            this.textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(textbox_KeyPress);
             this.panText = new FlowLayoutPanel();
             this.panButtons = new FlowLayoutPanel();
             this.SuspendLayout();

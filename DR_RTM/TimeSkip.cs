@@ -43,6 +43,8 @@ namespace DR_RTM
 
 		private const int gameTimeOffset = 408;
 
+		public static int cutsceneID;
+
 		private static uint gameTime;
 
 		private static uint campaignProgress;
@@ -978,6 +980,7 @@ namespace DR_RTM
 			campaignProgress = gameMemory.ReadUInt(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26496472, 134592), 336));
 			inCutsceneOrLoad = (gameMemory.ReadByte(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26500976), 112)) & 1) == 1;
 			loadingRoomId = gameMemory.ReadInt(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26500976), 72));
+			cutsceneID = gameMemory.ReadInt(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26496472, 134592), 33544));
 			caseMenuState = gameMemory.ReadByte(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26505152, 192600), 386));
 
 			form.TimeDisplayUpdate(StringTime(gameTime));
@@ -987,9 +990,17 @@ namespace DR_RTM
                 {
 					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 10368001u);
 				}
-				if (campaignProgress == 300 && EnableTimeskip && gameTime < 8964000)
+				if (campaignProgress == 300 && gameTime > 8200000 && gameTime < 8640000 && EnableTimeskip)
+				{
+					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 8640001u);
+				}
+				if (campaignProgress == 300 && EnableTimeskip && gameTime < 8964000 && cutsceneID == 76)
                 {
 					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 8964001u);
+				}
+				if (campaignProgress == 320 && loadingRoomId == 512 && gameTime > 8964000 && gameTime < 9072000 && !inCutsceneOrLoad && EnableTimeskip)
+				{
+					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 9072001u);
 				}
 				if (campaignProgress == 340 && EnableTimeskip && gameTime < 9612000 || campaignProgress == 345 && EnableTimeskip && gameTime < 9612000)
 				{
