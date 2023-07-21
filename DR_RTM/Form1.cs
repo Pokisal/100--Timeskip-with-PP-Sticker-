@@ -24,8 +24,6 @@ namespace DR_RTM
 
         public static bool PerfectGunner;
 
-        public static bool ActivateTextbox = false;
-
         public static string CurrentScreen = "PP Collector/Miscellanous";
         public static string NextTracker = "Gourmet/Clothes Horse";
 
@@ -3128,7 +3126,7 @@ namespace DR_RTM
             Process[] processesByName = Process.GetProcessesByName("DeadRising");
             if (processesByName.Length == 0)
             {
-                MyMessageBox.Show("The game process was not detected!\nPlease open the game.", "Error");
+                MessageBox.Show("The game process was not detected!\nPlease open the game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
             }
             TimeSkip.GameProcess = processesByName[0];
@@ -5782,14 +5780,9 @@ namespace DR_RTM
             }
             else if (e.Button == MouseButtons.Right)
             {
-                ActivateTextbox = true;
                 MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
-                ActivateTextbox = false;
-                if (TextboxText != null)
-                {
-                    Hotkey1 = TextboxText.ToUpper();
-                    toolTip1.SetToolTip(label133, $"Hotkey is: {Hotkey1}");
-                }
+                Hotkey1 = TextboxText.ToUpper();
+                toolTip1.SetToolTip(label133, $"Hotkey is: {Hotkey1}");
             }
         }
 
@@ -5797,14 +5790,9 @@ namespace DR_RTM
         {
             if (e.Button == MouseButtons.Right)
             {
-                ActivateTextbox = true;
                 MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
-                ActivateTextbox = false;
-                if (TextboxText != null)
-                {
-                    Hotkey2 = TextboxText.ToUpper();
-                    toolTip1.SetToolTip(checkBox1, $"Hotkey is: {Hotkey2}");
-                }
+                Hotkey2 = TextboxText.ToUpper();
+                toolTip1.SetToolTip(checkBox1, $"Hotkey is: {Hotkey2}");
             }
         }
     }
@@ -5841,14 +5829,11 @@ namespace DR_RTM
         private TextBox textbox;
         private MyMessageBox()
         {
-            if (Form1.ActivateTextbox == true)
-            {
-                this.textbox = new TextBox();
-                this.textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-                this.textbox.ForeColor = Color.White;
-                this.Controls.Add(this.textbox);
-                this.textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(textbox_KeyPress);
-            }
+            this.textbox = new TextBox();
+            this.textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.textbox.ForeColor = Color.White;
+            this.Controls.Add(this.textbox);
+            this.textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(textbox_KeyPress);
             this.panText = new FlowLayoutPanel();
             this.panButtons = new FlowLayoutPanel();
             this.SuspendLayout();
@@ -5898,11 +5883,7 @@ namespace DR_RTM
             this.PerformLayout();
             void textbox_KeyPress(object sender, KeyPressEventArgs e)
             {
-                if (e.KeyChar == 13)
-                {
-                    Form1.TextboxText = textbox.Text;
-                    Close();
-                }
+
             }
         }
         [DllImport("DwmApi")]
@@ -6008,16 +5989,9 @@ namespace DR_RTM
 
         private void Button_Click(object sender, EventArgs e)
         {
-            try
+            if (textbox.Text != null)
             {
-                if (textbox.Text != null)
-                {
-                    Form1.TextboxText = textbox.Text;
-                }
-            }
-            catch (NullReferenceException)
-            {
-                Close();
+                Form1.TextboxText = textbox.Text;
             }
             Result = ((Button)sender).Text;
             Close();
