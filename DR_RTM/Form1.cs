@@ -6,6 +6,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
+
 namespace DR_RTM
 {
 
@@ -13,26 +14,25 @@ namespace DR_RTM
     {
         private delegate void TimeDisplayUpdateCallback(string text);
 
+        KeyboardHook keyboardHook = new KeyboardHook();
+
         public Button button1;
 
         public Label label1;
 
         public Label label2;
 
-        public static Keys Key1 = Keys.OemMinus;
-
-        public static Keys Key2 = Keys.F1;
-
         public static bool PerfectGunner;
 
         public static string CurrentScreen = "PP Collector/Miscellanous";
         public static string NextTracker = "Gourmet/Clothes Horse";
 
+        public static string Hotkey1 = "OEM_MINUS";
+        public static string Hotkey2 = "F1";
+
         public static string TextboxText;
 
         public static string ToolTip = "";
-
-        KeysConverter kc = new KeysConverter();
 
         public static int TransmissionCount;
 
@@ -604,9 +604,7 @@ namespace DR_RTM
         public Form1()
         {
             InitializeComponent();
-            RegisterHotKey(this.Handle, 0, (int)KeyModifier.None, Key1.GetHashCode());
-            RegisterHotKey(this.Handle, 1, (int)KeyModifier.Control, Key2.GetHashCode());
-            RegisterHotKey(this.Handle, 2, (int)KeyModifier.Alt, Keys.F5.GetHashCode());
+            keyboardHook.Install();
             label133.Text = $"Click to cycle to {NextTracker}";
             toolTip1.OwnerDraw = true;
             toolTip1.Draw += new DrawToolTipEventHandler(toolTip1_Draw);
@@ -619,14 +617,6 @@ namespace DR_RTM
             label175.Visible = true;
         }
 
-        private void ReloadHotkeys()
-        {
-            UnregisterHotKey(this.Handle, 0);
-            UnregisterHotKey(this.Handle, 1);
-            RegisterHotKey(this.Handle, 0, (int)KeyModifier.None, Key1.GetHashCode());
-            RegisterHotKey(this.Handle, 1, (int)KeyModifier.Control, Key2.GetHashCode());
-        }
-
         [DllImport("kernel32.dll")]
         private static extern IntPtr OpenProcess(uint dwDesiredAccess, bool bInheritHandle, int dwProcessId);
 
@@ -635,23 +625,6 @@ namespace DR_RTM
 
         [DllImport("kernel32.dll")]
         private static extern int CloseHandle(IntPtr hObject);
-
-        [DllImport("user32.dll")]
-        static extern short GetAsyncKeyState(Int32 vKey);
-
-        [DllImport("user32.dll")]
-        private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
-        [DllImport("user32.dll")]
-        private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
-
-        enum KeyModifier
-        {
-            None = 0,
-            Alt = 1,
-            Control = 2,
-            Shift = 4,
-            WinKey = 8
-        }
 
         public static IntPtr MemoryOpen(int ProcessID)
         {
@@ -4611,7 +4584,7 @@ namespace DR_RTM
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             this.checkBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.checkBox1_MouseDown);
-            this.toolTip1.SetToolTip(this.checkBox1, $"Hotkey is: {Key2}");
+            this.toolTip1.SetToolTip(this.checkBox1, $"Hotkey is: {Hotkey2}");
             // 
             // label128
             // 
@@ -4677,7 +4650,7 @@ namespace DR_RTM
             this.label133.Size = new System.Drawing.Size(0, 13);
             this.label133.TabIndex = 141;
             this.label133.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label133_MouseDown);
-            this.toolTip1.SetToolTip(this.label133, $"Hotkey is: {Key1}");
+            this.toolTip1.SetToolTip(this.label133, $"Hotkey is: {Hotkey1}");
             // 
             // label134
             // 
@@ -5662,6 +5635,7 @@ namespace DR_RTM
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            keyboardHook.KeyDown += KeyboardHook_KeyDown;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "100% Timeskip with PP Sticker Tracker";
@@ -5670,78 +5644,63 @@ namespace DR_RTM
             this.PerformLayout();
 
         }
-        protected override void WndProc(ref Message m)
+
+        private void KeyboardHook_KeyDown(KeyboardHook.VKeys key)
         {
-            base.WndProc(ref m);
-
-            if (m.Msg == 0x0312)
+            if (Hotkey2 == key.ToString())
             {
-                /* Note that the three lines below are not needed if you only want to register one hotkey.
-                 * The below lines are useful in case you want to register multiple keys, which you can use a switch with the id as argument, or if you want to know which key/modifier was pressed for some particular reason. */
-
-                Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);                  // The key of the hotkey that was pressed.
-                KeyModifier modifier = (KeyModifier)((int)m.LParam & 0xFFFF);       // The modifier of the hotkey that was pressed.
-                int id = m.WParam.ToInt32();                                        // The id of the hotkey that was pressed.
-
-                if (id == 1)
+                if (TimeSkip.EnableTimeskip == true)
                 {
-                    if (TimeSkip.EnableTimeskip == true)
+                    checkBox1.Checked = false;
+                }
+                else
+                {
+                    checkBox1.Checked = true;
+                }
+            }
+            if (Hotkey1 == key.ToString())
+            {
+                bool a = false;
+                if (CurrentScreen == "PP Collector/Miscellanous")
+                {
+                    a = true;
+                    CurrentScreen = NextTracker;
+                    NextTracker = "PP Collector/Miscellanous";
+                    label133.Text = $"Click to cycle to {NextTracker}";
+                    for (int i = 4; i < 135; i++)
                     {
-                        checkBox1.Checked = false;
+                        string LabelI = $"label{i}";
+                        Label label = this.Controls[LabelI] as Label;
+                        label.Visible = false;
                     }
-                    else
+                    for (int i = 135; i < 222; i++)
                     {
-                        checkBox1.Checked = true;
+                        string LabelI = $"label{i}";
+                        Label label = this.Controls[LabelI] as Label;
+                        label.Visible = true;
                     }
                 }
-                if (id == 2)
+                label175.Visible = false;
+                if (CurrentScreen == "Gourmet/Clothes Horse" && a == false)
                 {
-                    Environment.Exit(0);
-                }
-                if (id == 0)
-                {
-                    bool a = false;
-                    if (CurrentScreen == "PP Collector/Miscellanous")
+                    CurrentScreen = NextTracker;
+                    NextTracker = "Gourmet/Clothes Horse";
+                    label133.Text = $"Click to cycle to {NextTracker}";
+                    for (int i = 4; i < 135; i++)
                     {
-                        a = true;
-                        CurrentScreen = NextTracker;
-                        NextTracker = "PP Collector/Miscellanous";
-                        label133.Text = $"Click to cycle to {NextTracker}";
-                        for (int i = 4; i < 135; i++)
-                        {
-                            string LabelI = $"label{i}";
-                            Label label = this.Controls[LabelI] as Label;
-                            label.Visible = false;
-                        }
-                        for (int i = 135; i < 222; i++)
-                        {
-                            string LabelI = $"label{i}";
-                            Label label = this.Controls[LabelI] as Label;
-                            label.Visible = true;
-                        }
+                        string LabelI = $"label{i}";
+                        Label label = this.Controls[LabelI] as Label;
+                        label.Visible = true;
                     }
-                    label175.Visible = false;
-                    if (CurrentScreen == "Gourmet/Clothes Horse" && a == false)
+                    for (int i = 135; i < 222; i++)
                     {
-                        CurrentScreen = NextTracker;
-                        NextTracker = "Gourmet/Clothes Horse";
-                        label133.Text = $"Click to cycle to {NextTracker}";
-                        for (int i = 4; i < 135; i++)
-                        {
-                            string LabelI = $"label{i}";
-                            Label label = this.Controls[LabelI] as Label;
-                            label.Visible = true;
-                        }
-                        for (int i = 135; i < 222; i++)
-                        {
-                            string LabelI = $"label{i}";
-                            Label label = this.Controls[LabelI] as Label;
-                            label.Visible = false;
-                        }
-                        label175.Visible = true;
+                        string LabelI = $"label{i}";
+                        Label label = this.Controls[LabelI] as Label;
+                        label.Visible = false;
                     }
-                    label133.Visible = true;
+                    label175.Visible = true;
                 }
+                label133.Visible = true;
             }
         }
 
@@ -5822,16 +5781,8 @@ namespace DR_RTM
             else if (e.Button == MouseButtons.Right)
             {
                 MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
-                try
-                {
-                    Keys key = (Keys)Enum.Parse(typeof(Keys), TextboxText, true);
-                    Key1 = key;
-                    ReloadHotkeys();
-                }
-                catch
-                {
-
-                }
+                Hotkey1 = TextboxText.ToUpper();
+                toolTip1.SetToolTip(label133, $"Hotkey is: {Hotkey1}");
             }
         }
 
@@ -5840,16 +5791,8 @@ namespace DR_RTM
             if (e.Button == MouseButtons.Right)
             {
                 MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
-                try
-                {
-                    Keys key = (Keys)Enum.Parse(typeof(Keys), TextboxText, true);
-                    Key2 = key;
-                    ReloadHotkeys();
-                }
-                catch
-                {
-
-                }
+                Hotkey2 = TextboxText.ToUpper();
+                toolTip1.SetToolTip(checkBox1, $"Hotkey is: {Hotkey2}");
             }
         }
     }
@@ -6032,7 +5975,7 @@ namespace DR_RTM
 
             mb.panButtons.Location = new Point(TotalWidth - ButtonWidth + 9, mb.panText.Location.Y + mb.panText.Height);
 
-            mb.Size = new Size(TotalWidth + 25, TotalHeight + 47);
+            mb.Size = new Size(TotalWidth + 39, TotalHeight + 47);
             mb.ShowDialog();
             return mb.Result;
         }
