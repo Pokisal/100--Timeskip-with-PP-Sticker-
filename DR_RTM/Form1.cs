@@ -22,6 +22,8 @@ namespace DR_RTM
 
         public Label label2;
 
+        public static List<string> AllowedHotkeys = new() { "LBUTTON", "RBUTTON", "CANCEL_KEY", "MBUTTON", "XBUTTON1", "XBUTTON2", "KEY_BACK", "TAB_KEY", "CLEAR", "RETURN_KEY", "SHIFT", "CONTROL", "MENU", "PAUSE", "CAPITAL", "KANA", "HANGUL", "JUNJA", "FINAL", "HANJA", "KANJI", "ESCAPE", "CONVERT", "NONCONVERT", "ACCEPT", "MODECHANGE", "SPACE_KEY", "PRIOR", "NEXT_KEY", "END_KEY", "HOME", "LEFT_KEY", "UP", "RIGHT_KEY", "DOWN", "SELECT_KEY", "PRINT_KEY", "EXECUTE", "SNAPSHOT", "INSERT", "DELETE", "HELP", "KEY_0", "KEY_1", "KEY_2", "KEY_3", "KEY_4", "KEY_5", "KEY_6", "KEY_7", "KEY_8", "KEY_9", "KEY_A", "KEY_B", "KEY_C", "KEY_D", "KEY_E", "KEY_F", "KEY_G", "KEY_H", "KEY_I", "KEY_J", "KEY_K", "KEY_L", "KEY_M", "KEY_N", "KEY_O", "KEY_P", "KEY_Q", "KEY_R", "KEY_S", "KEY_T", "KEY_U", "KEY_V", "KEY_W", "KEY_X", "KEY_Y", "KEY_Z", "LWIN", "RWIN", "APPS", "SLEEP", "NUMPAD0", "NUMPAD1", "NUMPAD2", "NUMPAD3", "NUMPAD4", "NUMPAD5", "NUMPAD6", "NUMPAD7", "NUMPAD8", "NUMPAD9", "MULTIPLY", "ADD", "SEPARATOR", "SUBTRACT", "DECIMAL_KEY", "DIVIDE", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19", "F20", "F21", "F22", "F23", "F24", "NUMLOCK", "SCROLL", "LSHIFT", "RSHIFT", "LCONTROL", "RCONTROL", "LMENU", "RMENU", "BROWSER_BACK", "BROWSER_FORWARD", "BROWSER_REFRESH", "BROWSER_STOP", "BROWSER_SEARCH", "BROWSER_FAVORITES", "BROWSER_HOME", "VOLUME_MUTE", "VOLUME_DOWN", "VOLUME_UP", "MEDIA_NEXT_TRACK", "MEDIA_PREV_TRACK", "MEDIA_STOP", "MEDIA_PLAY_PAUSE", "LAUNCH_MAIL", "LAUNCH_MEDIA_SELECT", "LAUNCH_APP1", "LAUNCH_APP2", "OEM_1", "OEM_PLUS", "OEM_COMMA", "OEM_MINUS", "OEM_PERIOD", "OEM_2", "OEM_3", "OEM_4", "OEM_5", "OEM_6", "OEM_7", "OEM_8", "OEM_102", "PROCESSKEY", "PACKET", "ATTN", "CRSEL", "EXSEL", "EREOF", "PLAY", "ZOOM", "NONAME", "PA1", "OEM_CLEAR" };
+
         public static bool PerfectGunner;
 
         public static bool ActivateTextbox = false;
@@ -29,8 +31,8 @@ namespace DR_RTM
         public static string CurrentScreen = "PP Collector/Miscellanous";
         public static string NextTracker = "Gourmet/Clothes Horse";
 
-        public static string Hotkey1 = "OEM_MINUS";
-        public static string Hotkey2 = "F1";
+        public static string Hotkey1 = Tracker.Properties.Settings.Default.Hotkey1;
+        public static string Hotkey2 = Tracker.Properties.Settings.Default.Hotkey2;
 
         public static string TextboxText;
 
@@ -5785,11 +5787,13 @@ namespace DR_RTM
                 ActivateTextbox = true;
                 MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
                 ActivateTextbox = false;
-                if (TextboxText != null)
+                if (AllowedHotkeys.Contains(TextboxText.ToUpper()))
                 {
                     Hotkey1 = TextboxText.ToUpper();
                     toolTip1.SetToolTip(label133, $"Hotkey is: {Hotkey1}");
+                    Tracker.Properties.Settings.Default.Hotkey1 = Hotkey1;
                 }
+                TextboxText = string.Empty;
             }
         }
 
@@ -5800,11 +5804,13 @@ namespace DR_RTM
                 ActivateTextbox = true;
                 MyMessageBox.Show("\n\nType chosen hotkey into the textbox and click OK to set it!");
                 ActivateTextbox = false;
-                if (TextboxText != null)
+                if (AllowedHotkeys.Contains(TextboxText.ToUpper()))
                 {
                     Hotkey2 = TextboxText.ToUpper();
                     toolTip1.SetToolTip(checkBox1, $"Hotkey is: {Hotkey2}");
+                    Tracker.Properties.Settings.Default.Hotkey1 = Hotkey2;
                 }
+                TextboxText = string.Empty;
             }
         }
     }
