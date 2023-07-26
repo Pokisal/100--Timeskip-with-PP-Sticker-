@@ -34,7 +34,7 @@ namespace DR_RTM
         public static string Hotkey1 = Tracker.Properties.Settings.Default.Hotkey1;
         public static string Hotkey2 = Tracker.Properties.Settings.Default.Hotkey2;
 
-        public static string TextboxText;
+        public static string TextboxText = "";
 
         public static string ToolTip = "";
 
