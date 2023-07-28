@@ -1006,6 +1006,10 @@ namespace DR_RTM
 				{
 					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 9612001u);
 				}
+				if (campaignProgress == 360 && EnableTimeskip && gameTime < 9936000)
+				{
+					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 9936001u);
+				}
 				if (campaignProgress == 370 && EnableTimeskip && gameTime < 9936000)
 				{
 					gameMemory.WriteUInt(IntPtr.Add(gameTimePtr, 408), 9936001u);
