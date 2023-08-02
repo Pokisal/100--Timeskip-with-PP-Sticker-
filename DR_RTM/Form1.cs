@@ -1601,8 +1601,8 @@ namespace DR_RTM
             {
                 label148.Text = "Raw Meat Acquired!";
                 label148.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 128;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 128;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1613,8 +1613,8 @@ namespace DR_RTM
             {
                 label147.Text = "Lettuce Acquired!";
                 label147.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 64;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 64;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1625,8 +1625,8 @@ namespace DR_RTM
             {
                 label146.Text = "Japanese Radish Acquired!";
                 label146.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 32;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 32;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1637,8 +1637,8 @@ namespace DR_RTM
             {
                 label145.Text = "Snack Acquired!";
                 label145.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 16;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 16;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1649,8 +1649,8 @@ namespace DR_RTM
             {
                 label144.Text = "Cabbage Acquired!";
                 label144.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 8;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 8;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1661,8 +1661,8 @@ namespace DR_RTM
             {
                 label143.Text = "Squash Acquired!";
                 label143.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 4;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 4;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1673,8 +1673,8 @@ namespace DR_RTM
             {
                 label142.Text = "Corn Acquired!";
                 label142.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 2;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 2;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1685,8 +1685,8 @@ namespace DR_RTM
             {
                 label141.Text = "Zucchini Acquired!";
                 label141.ForeColor = Color.Green;
-                GourmetByte1 = GourmetByte1 - 1;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte1 -= 1;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1697,8 +1697,8 @@ namespace DR_RTM
             {
                 label140.Text = "Orange Juice Acquired!";
                 label140.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 128;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 128;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1709,8 +1709,8 @@ namespace DR_RTM
             {
                 label139.Text = "Orange Acquired!";
                 label139.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 64;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 64;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1721,8 +1721,8 @@ namespace DR_RTM
             {
                 label172.Text = "Wine Acquired!";
                 label172.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 32;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 32;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1733,8 +1733,8 @@ namespace DR_RTM
             {
                 label138.Text = "Grapefuit Acquired!";
                 label138.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 16;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 16;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1745,8 +1745,8 @@ namespace DR_RTM
             {
                 label137.Text = "Melon Acquired!";
                 label137.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 8;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 8;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1757,8 +1757,8 @@ namespace DR_RTM
             {
                 label136.Text = "Baguette Acquired!";
                 label136.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 4;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 4;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1769,8 +1769,8 @@ namespace DR_RTM
             {
                 label135.Text = "Rotten Meat Acquired!";
                 label135.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 2;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 2;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1781,8 +1781,8 @@ namespace DR_RTM
             {
                 label173.Text = "Cooked Meat Acquired!";
                 label173.ForeColor = Color.Green;
-                GourmetByte2 = GourmetByte2 - 1;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte2 -= 1;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1793,8 +1793,8 @@ namespace DR_RTM
             {
                 label149.Text = "Rotten Pizza Acquired!";
                 label149.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 128;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 128;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1805,8 +1805,8 @@ namespace DR_RTM
             {
                 label150.Text = "Cooked Pizza Acquired!";
                 label150.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 64;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 64;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1817,8 +1817,8 @@ namespace DR_RTM
             {
                 label151.Text = "Uncooked Pizza Acquired!";
                 label151.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 32;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 32;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1829,8 +1829,8 @@ namespace DR_RTM
             {
                 label152.Text = "Red Cabbage Acquired!";
                 label152.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 16;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 16;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1841,8 +1841,8 @@ namespace DR_RTM
             {
                 label153.Text = "Cheese Acquired!";
                 label153.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 8;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 8;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1853,8 +1853,8 @@ namespace DR_RTM
             {
                 label154.Text = "Yogurt Acquired!";
                 label154.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 4;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 4;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1865,8 +1865,8 @@ namespace DR_RTM
             {
                 label155.Text = "Coffee Creamer Acquired!";
                 label155.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 2;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 2;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1877,8 +1877,8 @@ namespace DR_RTM
             {
                 label156.Text = "Jug of Milk Acquired!";
                 label156.ForeColor = Color.Green;
-                GourmetByte3 = GourmetByte3 - 1;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte3 -= 1;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1889,8 +1889,8 @@ namespace DR_RTM
             {
                 label157.Text = "Thawed Vegetables Acquired!";
                 label157.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 128;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 128;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1901,8 +1901,8 @@ namespace DR_RTM
             {
                 label158.Text = "Ice Pops Acquired!";
                 label158.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 64;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 64;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1913,8 +1913,8 @@ namespace DR_RTM
             {
                 label159.Text = "Melted Ice Pops Acquired!";
                 label159.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 32;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 32;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1925,8 +1925,8 @@ namespace DR_RTM
             {
                 label160.Text = "Frozen Vegetables Acquired!";
                 label160.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 16;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 16;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1937,8 +1937,8 @@ namespace DR_RTM
             {
                 label161.Text = "Carton of Milk Acquired!";
                 label161.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 8;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 8;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1949,8 +1949,8 @@ namespace DR_RTM
             {
                 label162.Text = "Apple Acquired!";
                 label162.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 4;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 4;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1961,8 +1961,8 @@ namespace DR_RTM
             {
                 label163.Text = "Cookies Acquired!";
                 label163.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 2;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 2;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1973,8 +1973,8 @@ namespace DR_RTM
             {
                 label164.Text = "Pie Acquired!";
                 label164.ForeColor = Color.Green;
-                GourmetByte4 = GourmetByte4 - 1;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte4 -= 1;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1985,8 +1985,8 @@ namespace DR_RTM
             {
                 label165.Text = "Zombait Acquired!";
                 label165.ForeColor = Color.Green;
-                GourmetByte5 = GourmetByte5 - 64;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte5 -= 64;
+                LocalGourmetCount++;
             }
             else
             {
@@ -1996,9 +1996,9 @@ namespace DR_RTM
             if (GourmetByte5 >= 32)
             {
                 label166.Text = "Energizer Acquired!";
-                label166.ForeColor = Color.Red;
-                GourmetByte5 = GourmetByte5 - 32;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                label166.ForeColor = Color.Green;
+                GourmetByte5 -= 32;
+                LocalGourmetCount++;
             }
             else
             {
@@ -2009,8 +2009,8 @@ namespace DR_RTM
             {
                 label167.Text = "Nectar Acquired!";
                 label167.ForeColor = Color.Green;
-                GourmetByte5 = GourmetByte5 - 16;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte5 -= 16;
+                LocalGourmetCount++;
             }
             else
             {
@@ -2021,8 +2021,8 @@ namespace DR_RTM
             {
                 label168.Text = "Spitfire Acquired!";
                 label168.ForeColor = Color.Green;
-                GourmetByte5 = GourmetByte5 - 8;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte5 -= 8;
+                LocalGourmetCount++;
             }
             else
             {
@@ -2033,8 +2033,8 @@ namespace DR_RTM
             {
                 label169.Text = "Untouchable Acquired!";
                 label169.ForeColor = Color.Green;
-                GourmetByte5 = GourmetByte5 - 4;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte5 -= 4;
+                LocalGourmetCount++;
             }
             else
             {
@@ -2045,8 +2045,8 @@ namespace DR_RTM
             {
                 label170.Text = "Randomizer Acquired!";
                 label170.ForeColor = Color.Green;
-                GourmetByte5 = GourmetByte5 - 2;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte5 -= 2;
+                LocalGourmetCount++;
             }
             else
             {
@@ -2057,8 +2057,8 @@ namespace DR_RTM
             {
                 label171.Text = "Quickstep Acquired!";
                 label171.ForeColor = Color.Green;
-                GourmetByte5 = GourmetByte5 - 1;
-                LocalGourmetCount = LocalGourmetCount + 1;
+                GourmetByte5 -= 1;
+                LocalGourmetCount++;
             }
             else
             {
@@ -2079,8 +2079,8 @@ namespace DR_RTM
             {
                 label174.Text = "Grey Suit Acquired!";
                 label174.ForeColor = Color.Green;
-                ClothesHorseByte1 = ClothesHorseByte1 - 128;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte1 -= 128;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2091,8 +2091,8 @@ namespace DR_RTM
             {
                 label219.Text = "Checkered Business Suit Acquired!";
                 label219.ForeColor = Color.Green;
-                ClothesHorseByte1 = ClothesHorseByte1 - 64;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte1 -= 64;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2103,8 +2103,8 @@ namespace DR_RTM
             {
                 label176.Text = "White Dress Shirt Acquired!";
                 label176.ForeColor = Color.Green;
-                ClothesHorseByte1 = ClothesHorseByte1 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte1 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2115,8 +2115,8 @@ namespace DR_RTM
             {
                 label177.Text = "Red Sleveless Shirt Acquired!";
                 label177.ForeColor = Color.Green;
-                ClothesHorseByte1 = ClothesHorseByte1 - 16;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte1 -= 16;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2127,8 +2127,8 @@ namespace DR_RTM
             {
                 label178.Text = "Titty Shirt Acquired!";
                 label178.ForeColor = Color.Green;
-                ClothesHorseByte1 = ClothesHorseByte1 - 8;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte1 -= 8;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2139,8 +2139,8 @@ namespace DR_RTM
             {
                 label179.Text = "Brown Fur Coat Acquired!";
                 label179.ForeColor = Color.Green;
-                ClothesHorseByte1 = ClothesHorseByte1 - 4;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte1 -= 4;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2151,8 +2151,8 @@ namespace DR_RTM
             {
                 label180.Text = "White Strapped Dress Acquired!";
                 label180.ForeColor = Color.Green;
-                ClothesHorseByte2 = ClothesHorseByte2 - 64;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte2 -= 64;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2163,8 +2163,8 @@ namespace DR_RTM
             {
                 label181.Text = "Purple Dress Acquired!";
                 label181.ForeColor = Color.Green;
-                ClothesHorseByte2 = ClothesHorseByte2 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte2 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2175,8 +2175,8 @@ namespace DR_RTM
             {
                 label220.Text = "Pink Skirt Acquired!";
                 label220.ForeColor = Color.Green;
-                ClothesHorseByte2 = ClothesHorseByte2 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte2 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2187,8 +2187,8 @@ namespace DR_RTM
             {
                 label182.Text = "Black Dress Acquired!";
                 label182.ForeColor = Color.Green;
-                ClothesHorseByte2 = ClothesHorseByte2 - 8;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte2 -= 8;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2199,8 +2199,8 @@ namespace DR_RTM
             {
                 label183.Text = "White Business Skirt Acquired!";
                 label183.ForeColor = Color.Green;
-                ClothesHorseByte2 = ClothesHorseByte2 - 4;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte2 -= 4;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2211,8 +2211,8 @@ namespace DR_RTM
             {
                 label184.Text = "Yellow Suit Acquired!";
                 label184.ForeColor = Color.Green;
-                ClothesHorseByte2 = ClothesHorseByte2 - 2;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte2 -= 2;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2223,8 +2223,8 @@ namespace DR_RTM
             {
                 label185.Text = "White Suit Acquired!";
                 label185.ForeColor = Color.Green;
-                ClothesHorseByte2 = ClothesHorseByte2 - 1;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte2 -= 1;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2235,8 +2235,8 @@ namespace DR_RTM
             {
                 label186.Text = "USA Track Suit Acquired!";
                 label186.ForeColor = Color.Green;
-                ClothesHorseByte3 = ClothesHorseByte3 - 128;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte3 -= 128;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2247,8 +2247,8 @@ namespace DR_RTM
             {
                 label187.Text = "Red,White and Blue Kids Clothes Acquired!";
                 label187.ForeColor = Color.Green;
-                ClothesHorseByte3 = ClothesHorseByte3 - 16;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte3 -= 16;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2259,8 +2259,8 @@ namespace DR_RTM
             {
                 label188.Text = "Purple/Black Kids Clothes Acquired!";
                 label188.ForeColor = Color.Green;
-                ClothesHorseByte3 = ClothesHorseByte3 - 8;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte3 -= 8;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2271,8 +2271,8 @@ namespace DR_RTM
             {
                 label189.Text = "Green Ratman Shirt Acquired!";
                 label189.ForeColor = Color.Green;
-                ClothesHorseByte3 = ClothesHorseByte3 - 4;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte3 -= 4;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2283,8 +2283,8 @@ namespace DR_RTM
             {
                 label190.Text = "Red Ratman Shirt Acquired!";
                 label190.ForeColor = Color.Green;
-                ClothesHorseByte3 = ClothesHorseByte3 - 2;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte3 -= 2;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2295,8 +2295,8 @@ namespace DR_RTM
             {
                 label191.Text = "Blue/White Flower Dress Acquired!";
                 label191.ForeColor = Color.Green;
-                ClothesHorseByte3 = ClothesHorseByte3 - 1;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte3 -= 1;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2307,8 +2307,8 @@ namespace DR_RTM
             {
                 label192.Text = "Blue Vest & Khaki's Acquired!";
                 label192.ForeColor = Color.Green;
-                ClothesHorseByte4 = ClothesHorseByte4 - 4;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte4 -= 4;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2319,8 +2319,8 @@ namespace DR_RTM
             {
                 label193.Text = "Camoflauge Vest Acquired!";
                 label193.ForeColor = Color.Green;
-                ClothesHorseByte4 = ClothesHorseByte4 - 2;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte4 -= 2;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2331,8 +2331,8 @@ namespace DR_RTM
             {
                 label194.Text = "Black/White Track Suit Acquired!";
                 label194.ForeColor = Color.Green;
-                ClothesHorseByte4 = ClothesHorseByte4 - 1;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte4 -= 1;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2343,8 +2343,8 @@ namespace DR_RTM
             {
                 label197.Text = "Red/Black Tennis Shoes Acquired!";
                 label197.ForeColor = Color.Green;
-                ClothesHorseByte5 = ClothesHorseByte5 - 128;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte5 -= 128;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2355,8 +2355,8 @@ namespace DR_RTM
             {
                 label195.Text = "Black Dress Shoes Acquired!";
                 label195.ForeColor = Color.Green;
-                ClothesHorseByte5 = ClothesHorseByte5 - 64;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte5 -= 64;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2367,8 +2367,8 @@ namespace DR_RTM
             {
                 label196.Text = "White Dress Shoes Acquired!";
                 label196.ForeColor = Color.Green;
-                ClothesHorseByte5 = ClothesHorseByte5 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte5 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2379,8 +2379,8 @@ namespace DR_RTM
             {
                 label198.Text = "Megaman Helmet Acquired!";
                 label198.ForeColor = Color.Green;
-                ClothesHorseByte6 = ClothesHorseByte6 - 128;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte6 -= 128;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2391,8 +2391,8 @@ namespace DR_RTM
             {
                 label199.Text = "Shaved Head Acquired!";
                 label199.ForeColor = Color.Green;
-                ClothesHorseByte6 = ClothesHorseByte6 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte6 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2403,8 +2403,8 @@ namespace DR_RTM
             {
                 label200.Text = "Orange Tennis Shoes Acquired!";
                 label200.ForeColor = Color.Green;
-                ClothesHorseByte6 = ClothesHorseByte6 - 2;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte6 -= 2;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2415,8 +2415,8 @@ namespace DR_RTM
             {
                 label201.Text = "White Tennis Shoes Acquired!";
                 label201.ForeColor = Color.Green;
-                ClothesHorseByte6 = ClothesHorseByte6 - 1;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte6 -= 1;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2427,8 +2427,8 @@ namespace DR_RTM
             {
                 label202.Text = "Black Fedora Acquired!";
                 label202.ForeColor = Color.Green;
-                ClothesHorseByte7 = ClothesHorseByte7 - 128;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte7 -= 128;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2439,8 +2439,8 @@ namespace DR_RTM
             {
                 label203.Text = "Brown Fedora Acquired!";
                 label203.ForeColor = Color.Green;
-                ClothesHorseByte7 = ClothesHorseByte7 - 64;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte7 -= 64;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2451,8 +2451,8 @@ namespace DR_RTM
             {
                 label204.Text = "Blue Baseball Cap Acquired!";
                 label204.ForeColor = Color.Green;
-                ClothesHorseByte7 = ClothesHorseByte7 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte7 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2463,8 +2463,8 @@ namespace DR_RTM
             {
                 label205.Text = "Black Baseball Cap Acquired!";
                 label205.ForeColor = Color.Green;
-                ClothesHorseByte7 = ClothesHorseByte7 - 16;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte7 -= 16;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2475,8 +2475,8 @@ namespace DR_RTM
             {
                 label206.Text = "Red Hair Acquired!";
                 label206.ForeColor = Color.Green;
-                ClothesHorseByte7 = ClothesHorseByte7 - 4;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte7 -= 4;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2487,8 +2487,8 @@ namespace DR_RTM
             {
                 label207.Text = "Brown Hair Acquired!";
                 label207.ForeColor = Color.Green;
-                ClothesHorseByte7 = ClothesHorseByte7 - 2;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte7 -= 2;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2499,8 +2499,8 @@ namespace DR_RTM
             {
                 label208.Text = "Grey Hair Acquired!";
                 label208.ForeColor = Color.Green;
-                ClothesHorseByte7 = ClothesHorseByte7 - 1;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte7 -= 1;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2511,8 +2511,8 @@ namespace DR_RTM
             {
                 label209.Text = "Servbot Mask Acquired!";
                 label209.ForeColor = Color.Green;
-                ClothesHorseByte8 = ClothesHorseByte8 - 64;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte8 -= 64;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2523,8 +2523,8 @@ namespace DR_RTM
             {
                 label210.Text = "Teddy Mask Acquired!";
                 label210.ForeColor = Color.Green;
-                ClothesHorseByte8 = ClothesHorseByte8 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte8 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2535,8 +2535,8 @@ namespace DR_RTM
             {
                 label211.Text = "Horse Mask Acquired!";
                 label211.ForeColor = Color.Green;
-                ClothesHorseByte8 = ClothesHorseByte8 - 16;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte8 -= 16;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2547,8 +2547,8 @@ namespace DR_RTM
             {
                 label212.Text = "Demon Mask Acquired!";
                 label212.ForeColor = Color.Green;
-                ClothesHorseByte8 = ClothesHorseByte8 - 8;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte8 -= 8;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2559,8 +2559,8 @@ namespace DR_RTM
             {
                 label213.Text = "Orange Sunglasses Acquired!";
                 label213.ForeColor = Color.Green;
-                ClothesHorseByte9 = ClothesHorseByte9 - 64;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte9 -= 64;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2571,8 +2571,8 @@ namespace DR_RTM
             {
                 label214.Text = "Silver Rimless Glasses Acquired!";
                 label214.ForeColor = Color.Green;
-                ClothesHorseByte9 = ClothesHorseByte9 - 64;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte9 -= 64;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2583,8 +2583,8 @@ namespace DR_RTM
             {
                 label215.Text = "Red Sunglases Acquired!";
                 label215.ForeColor = Color.Green;
-                ClothesHorseByte9 = ClothesHorseByte9 - 32;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte9 -= 32;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2595,8 +2595,8 @@ namespace DR_RTM
             {
                 label216.Text = "Grey Rimless Glasses Acquired!";
                 label216.ForeColor = Color.Green;
-                ClothesHorseByte9 = ClothesHorseByte9 - 16;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte9 -= 16;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2607,8 +2607,8 @@ namespace DR_RTM
             {
                 label217.Text = "Silver Wireframe Glasses Acquired!";
                 label217.ForeColor = Color.Green;
-                ClothesHorseByte9 = ClothesHorseByte9 - 8;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte9 -= 8;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2619,8 +2619,8 @@ namespace DR_RTM
             {
                 label218.Text = "Brown Sunglasses Acquired!";
                 label218.ForeColor = Color.Green;
-                ClothesHorseByte9 = ClothesHorseByte9 - 4;
-                LocalClothesHorseCount = LocalClothesHorseCount + 1;
+                ClothesHorseByte9 -= 4;
+                LocalClothesHorseCount++;
             }
             else
             {
@@ -2638,345 +2638,345 @@ namespace DR_RTM
             int TransmissionaryByte6 = TimeSkip.ReadTransmissionaryArray.ElementAt(10);
             if (TransmissionaryByte6 >= 32)
             {
-                TransmissionaryByte6 = TransmissionaryByte6 - 32;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte6 -= 32;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Jamming Device Call Missing!\r\n";
+                ToolTipText += "Jamming Device Call Missing!\r\n";
             }
             if (TransmissionaryByte6 >= 16)
             {
-                TransmissionaryByte6 = TransmissionaryByte6 - 16;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte6 -= 16;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Last Resort Call Missing!\r\n";
+                ToolTipText += "Last Resort Call Missing!\r\n";
             }
             if (TransmissionaryByte6 >= 8)
             {
-                TransmissionaryByte6 = TransmissionaryByte6 - 8;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte6 -= 8;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Santa Cabeza Call Missing!\r\n";
+                ToolTipText += "Santa Cabeza Call Missing!\r\n";
             }
             if (TransmissionaryByte6 >= 4)
             {
-                TransmissionaryByte6 = TransmissionaryByte6 - 4;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte6 -= 4;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "A Promise To Isabella Call Missing!\r\n";
+                ToolTipText += "A Promise To Isabella Call Missing!\r\n";
             }
             if (TransmissionaryByte6 >= 2)
             {
-                TransmissionaryByte6 = TransmissionaryByte6 - 2;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte6 -= 2;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Another Source Call Missing!\r\n";
+                ToolTipText += "Another Source Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 128)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 128;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 128;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Image in the Monitor Call Missing!\r\n";
+                ToolTipText += "Image in the Monitor Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 64)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 64;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 64;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Entrance Plaza Shutter Call Missing!\r\n";
+                ToolTipText += "Entrance Plaza Shutter Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 32)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 32;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 32;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Wonderland Call Missing!\r\n";
+                ToolTipText += "Wonderland Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 16)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 16;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 16;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Seon's Call Missing!\r\n";
+                ToolTipText += "Seon's Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 8)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 8;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 8;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Maintanence Tunnels Call Missing!\r\n";
+                ToolTipText += "Maintanence Tunnels Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 4)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 4;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 4;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "North Plaza Call Missing!\r\n";
+                ToolTipText += "North Plaza Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 2)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 2;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 2;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Food Court Call Missing!\r\n";
+                ToolTipText += "Food Court Call Missing!\r\n";
             }
             if (TransmissionaryByte5 >= 1)
             {
-                TransmissionaryByte5 = TransmissionaryByte5 - 1;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte5 -= 1;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Entrance Plaza Call Missing!\r\n";
+                ToolTipText += "Entrance Plaza Call Missing!\r\n";
             }
             if (TransmissionaryByte4 >= 128)
             {
-                TransmissionaryByte4 = TransmissionaryByte4 - 128;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte4 -= 128;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Warehouse Call Missing!\r\n";
+                ToolTipText += "Warehouse Call Missing!\r\n";
             }
             if (TransmissionaryByte4 >= 64)
             {
-                TransmissionaryByte4 = TransmissionaryByte4 - 64;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte4 -= 64;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Cheryl's Request Missing!\r\n";
+                ToolTipText += "Cheryl's Request Missing!\r\n";
             }
             if (TransmissionaryByte4 >= 32)
             {
-                TransmissionaryByte4 = TransmissionaryByte4 - 32;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte4 -= 32;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Paul's Present Missing!\r\n";
+                ToolTipText += "Paul's Present Missing!\r\n";
             }
             if (TransmissionaryByte4 >= 16)
             {
-                TransmissionaryByte4 = TransmissionaryByte4 - 16;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte4 -= 16;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Simone The Gunslinger Missing!\r\n";
+                ToolTipText += "Simone The Gunslinger Missing!\r\n";
             }
             if (TransmissionaryByte4 >= 8)
             {
-                TransmissionaryByte4 = TransmissionaryByte4 - 8;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte4 -= 8;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Floyd The Sommelier Missing!\r\n";
+                ToolTipText += "Floyd The Sommelier Missing!\r\n";
             }
             if (TransmissionaryByte4 >= 2)
             {
-                TransmissionaryByte4 = TransmissionaryByte4 - 2;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte4 -= 2;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Ronald's Appetite Missing!\r\n";
+                ToolTipText += "Ronald's Appetite Missing!\r\n";
             }
             if (TransmissionaryByte4 >= 1)
             {
-                TransmissionaryByte4 = TransmissionaryByte4 - 1;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte4 -= 1;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Kindell's Betrayal Missing!\r\n";
+                ToolTipText += "Kindell's Betrayal Missing!\r\n";
             }
             if (TransmissionaryByte1 >= 128)
             {
-                TransmissionaryByte1 = TransmissionaryByte1 - 128;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte1 -= 128;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Long Haired Punk Missing!\r\n";
+                ToolTipText += "Long Haired Punk Missing!\r\n";
             }
             if (TransmissionaryByte1 >= 64)
             {
-                TransmissionaryByte1 = TransmissionaryByte1 - 64;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte1 -= 64;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Above The Law Missing!\r\n";
+                ToolTipText += "Above The Law Missing!\r\n";
             }
             if (TransmissionaryByte1 >= 32)
             {
-                TransmissionaryByte1 = TransmissionaryByte1 - 32;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte1 -= 32;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Out of Control Missing!\r\n";
+                ToolTipText += "Out of Control Missing!\r\n";
             }
             if (TransmissionaryByte1 >= 16)
             {
-                TransmissionaryByte1 = TransmissionaryByte1 - 16;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte1 -= 16;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "A Strange Group Missing!\r\n";
+                ToolTipText += "A Strange Group Missing!\r\n";
             }
             if (TransmissionaryByte1 >= 8)
             {
-                TransmissionaryByte1 = TransmissionaryByte1 - 8;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte1 -= 8;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Hatchet Man Missing!\r\n";
+                ToolTipText += "Hatchet Man Missing!\r\n";
             }
             if (TransmissionaryByte1 >= 1)
             {
-                TransmissionaryByte1 = TransmissionaryByte1 - 1;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte1 -= 1;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Cut From The Same Cloth Missing!\r\n";
+                ToolTipText += "Cut From The Same Cloth Missing!\r\n";
             }
             if (TransmissionaryByte2 >= 64)
             {
-                TransmissionaryByte2 = TransmissionaryByte2 - 64;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte2 -= 64;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "The Woman Who Didn't Make It Missing!\r\n";
+                ToolTipText += "The Woman Who Didn't Make It Missing!\r\n";
             }
             if (TransmissionaryByte2 >= 32)
             {
-                TransmissionaryByte2 = TransmissionaryByte2 - 32;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte2 -= 32;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Barricade Pair Missing!\r\n";
+                ToolTipText += "Barricade Pair Missing!\r\n";
             }
             if (TransmissionaryByte2 >= 16)
             {
-                TransmissionaryByte2 = TransmissionaryByte2 - 16;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte2 -= 16;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Antique Lover Missing!\r\n";
+                ToolTipText += "Antique Lover Missing!\r\n";
             }
             if (TransmissionaryByte2 >= 8)
             {
-                TransmissionaryByte2 = TransmissionaryByte2 - 8;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte2 -= 8;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Restaraunt Man Missing!\r\n";
+                ToolTipText += "Restaraunt Man Missing!\r\n";
             }
             if (TransmissionaryByte2 >= 4)
             {
-                TransmissionaryByte2 = TransmissionaryByte2 - 4;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte2 -= 4;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "The Coward Missing!\r\n";
+                ToolTipText += "The Coward Missing!\r\n";
             }
             if (TransmissionaryByte2 >= 1)
             {
-                TransmissionaryByte2 = TransmissionaryByte2 - 1;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte2 -= 1;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Shadow of the North Plaza Missing!\r\n";
+                ToolTipText += "Shadow of the North Plaza Missing!\r\n";
             }
             if (TransmissionaryByte3 >= 32)
             {
-                TransmissionaryByte3 = TransmissionaryByte3 - 32;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte3 -= 32;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "A Woman in Despair Missing!\r\n";
+                ToolTipText += "A Woman in Despair Missing!\r\n";
             }
             if (TransmissionaryByte3 >= 16)
             {
-                TransmissionaryByte3 = TransmissionaryByte3 - 16;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte3 -= 16;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Lovers Missing!\r\n";
+                ToolTipText += "Lovers Missing!\r\n";
             }
             if (TransmissionaryByte3 >= 8)
             {
-                TransmissionaryByte3 = TransmissionaryByte3 - 8;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte3 -= 8;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "A Sick Man Missing!\r\n";
+                ToolTipText += "A Sick Man Missing!\r\n";
             }
             if (TransmissionaryByte3 >= 4)
             {
-                TransmissionaryByte3 = TransmissionaryByte3 - 4;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte3 -= 4;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Mark of the Sniper Missing!\r\n";
+                ToolTipText += "Mark of the Sniper Missing!\r\n";
             }
             if (TransmissionaryByte3 >= 2)
             {
-                TransmissionaryByte3 = TransmissionaryByte3 - 2;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte3 -= 2;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Japanese Tourists Missing!\r\n";
+                ToolTipText += "Japanese Tourists Missing!\r\n";
             }
             if (TransmissionaryByte3 >= 1)
             {
-                TransmissionaryByte3 = TransmissionaryByte3 - 1;
-                LocalTransmissionCount = LocalTransmissionCount + 1;
+                TransmissionaryByte3 -= 1;
+                LocalTransmissionCount++;
             }
             else
             {
-                ToolTipText = ToolTipText + "Mother's Lament Missing!";
+                ToolTipText += "Mother's Lament Missing!";
             }
             ToolTip = ToolTipText;
             TransmissionCount = LocalTransmissionCount;
@@ -5844,16 +5844,21 @@ namespace DR_RTM
     }
     public partial class MyMessageBox : Form
     {
+        private ContextMenu DummyMenu = new();
+
         private TextBox textbox;
         private MyMessageBox()
         {
+            
             if (Form1.ActivateTextbox == true)
             {
                 this.textbox = new TextBox();
+                this.textbox.Location = new System.Drawing.Point(15, 5);
                 this.textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
                 this.textbox.ForeColor = Color.White;
                 this.Controls.Add(this.textbox);
                 this.textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(textbox_KeyPress);
+                this.textbox.ContextMenu = DummyMenu;
             }
             this.panText = new FlowLayoutPanel();
             this.panButtons = new FlowLayoutPanel();
@@ -6028,7 +6033,6 @@ namespace DR_RTM
             Result = ((Button)sender).Text;
             Close();
         }
-
         private string Result = "";
     }
 }

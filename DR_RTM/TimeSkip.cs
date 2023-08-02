@@ -982,7 +982,6 @@ namespace DR_RTM
 			loadingRoomId = gameMemory.ReadInt(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26500976), 72));
 			cutsceneID = gameMemory.ReadInt(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26496472, 134592), 33544));
 			caseMenuState = gameMemory.ReadByte(IntPtr.Add(gameMemory.Pointer("DeadRising.exe", 26505152, 192600), 386));
-
 			form.TimeDisplayUpdate(StringTime(gameTime));
 			if (DisableAllTimeskips != true)
 			{
