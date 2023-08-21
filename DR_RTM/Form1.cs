@@ -2147,6 +2147,18 @@ namespace DR_RTM
                 label179.Text = "Brown Fur Coat Missing!";
                 label179.ForeColor = Color.Red;
             }
+            if (ClothesHorseByte2 >= 128)
+            {
+                label220.Text = "Pink Skirt Acquired!";
+                label220.ForeColor = Color.Green;
+                ClothesHorseByte2 -= 128;
+                LocalClothesHorseCount++;
+            }
+            else
+            {
+                label220.Text = "Pink Skirt Missing!";
+                label220.ForeColor = Color.Red;
+            }
             if (ClothesHorseByte2 >= 64)
             {
                 label180.Text = "White Strapped Dress Acquired!";
@@ -2170,18 +2182,6 @@ namespace DR_RTM
             {
                 label181.Text = "Purple Dress Missing!";
                 label181.ForeColor = Color.Red;
-            }
-            if (ClothesHorseByte2 >= 16)
-            {
-                label220.Text = "Pink Skirt Acquired!";
-                label220.ForeColor = Color.Green;
-                ClothesHorseByte2 -= 32;
-                LocalClothesHorseCount++;
-            }
-            else
-            {
-                label220.Text = "Pink Skirt Missing!";
-                label220.ForeColor = Color.Red;
             }
             if (ClothesHorseByte2 >= 8)
             {
@@ -5390,7 +5390,7 @@ namespace DR_RTM
             this.label220.Name = "label220";
             this.label220.Size = new System.Drawing.Size(0, 13);
             this.label220.TabIndex = 228;
-            this.toolTip1.SetToolTip(this.label220, "Al Fresca: Brand New U");
+            this.toolTip1.SetToolTip(this.label220, "Entrance: J.F. Nichols/Kathy's Boutique\nWonderland: Lovely Fashion House\nAl Fresca: Brand New U");
             // 
             // label175
             // 
